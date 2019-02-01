@@ -5,11 +5,11 @@ This folder houses software materials for the Waziup IoT and Big Data Cloud Plat
 
 The Arduino folder contains three sub folders namely:
 
-1. __Installations & Softwares__ - this folder contains driver software for all Waziup related hardware.
+1. _Installations & Softwares_ - this folder contains driver software for all Waziup related hardware.
 
 		For the NanoLora and Wazidev v1.2 boards to work properly on windows, simply download and install "CH341SER.EXE".
 
-2. *examples* - this folder contains code examples for various prototyping use cases with Waziup.
+2. _examples_ - this folder contains code examples for various prototyping use cases with Waziup.
 
 		To have all Waziup code examples showing up inside your Arduino examples list.
 
@@ -20,7 +20,7 @@ The Arduino folder contains three sub folders namely:
 	*NOTE*: The file path above is dependent your primary drive letter. Just find the "Arduino" folder inside your.
 	"Program Files (x86)" on you primary drive and locate the "examples" folder.
 
-3. *libraries* - this folder contains libraries needed to enable code examples to work properply with sensors and related hardware.
+3. _libraries_ - this folder contains libraries needed to enable code examples to work properply with sensors and related hardware.
 
 		-First close your Arduino IDE and all related processes.
 		-Copy all the content of the libraries folder.
