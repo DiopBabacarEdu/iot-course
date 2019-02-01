@@ -15,9 +15,14 @@ To have all Waziup code examples showing up inside your Arduino examples list.
 
 -First close your Arduino IDE and all related processes.
 -Copy "12.Waziup" and paste inside the examples folder at C:\Program Files (x86)\Arduino\examples
--Open your Arduino IDE and navigate to Files->Examples->Waziup
+-Open your Arduino IDE and navigate to Files->Examples->Waziup to find all examples.
 
 *NOTE*: Your file path may not be same as the one specified...just find the "Arduino" folder inside your
 "Program Files (x86)" and locate the "examples" folder.
 
-3. ** - 
+3. *libraries* - this folder contains libraries needed to enable code examples to work properply with sensors and related hardware
+
+-First close your Arduino IDE and all related processes.
+-Copy all the content of the libraries folder
+-Navigate to C:\Users\McBishop\Documents\Arduino\libraries and paste
+-Open your Arduino IDE and navigate to 
