@@ -2,6 +2,7 @@
 This folder houses software materials for the Waziup IoT and Big Data Cloud Platform.
 
 ----------Arduino Folder-----------
+
 The Arduino folder contains three sub folders namely:
 
 1. *Installations & Softwares* - this folder contains driver software for all Waziup related hardware.
