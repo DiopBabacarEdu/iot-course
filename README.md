@@ -17,7 +17,7 @@ The Arduino folder contains three sub folders namely:
 		-Copy "12.Waziup" and paste inside the examples folder at "..\Program Files (x86)\Arduino\examples".
 		-Open your Arduino IDE and navigate to "Files->Examples->Waziup" to find all examples.
 
-	*NOTE*: The file path above is dependent your primary drive letter..just find the "Arduino" folder inside your.
+	*NOTE*: The file path above is dependent your primary drive letter. Just find the "Arduino" folder inside your.
 	"Program Files (x86)" on you primary drive and locate the "examples" folder.
 
 3. *libraries* - this folder contains libraries needed to enable code examples to work properply with sensors and related hardware.
