@@ -1,7 +1,7 @@
 # iot-course
 This folder houses software materials for the Waziup IoT and Big Data Cloud Platform.
 
-----------Arduino Folder-----------
+---------------------------------------Arduino Folder-----------------------------------------
 
 The Arduino folder contains three sub folders namely:
 
@@ -26,3 +26,5 @@ The Arduino folder contains three sub folders namely:
 		-Copy all the content of the libraries folder.
 		-Navigate to "..\Documents\Arduino\libraries" and paste.
 		-Open your Arduino IDE and navigate to "Sketch->Inlude Library".
+
+----------------------------------------------------------------------------------------------
