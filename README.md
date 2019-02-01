@@ -9,7 +9,7 @@ The Arduino folder contains three sub folders namely:
 
 		For the NanoLora and Wazidev v1.2 boards to work properly on windows, simply download and install "CH341SER.EXE".
 
-2. _examples_ - this folder contains code examples for various prototyping use cases with Waziup.
+2. __examples__ - this folder contains code examples for various prototyping use cases with Waziup.
 
 		To have all Waziup code examples showing up inside your Arduino examples list.
 
@@ -20,7 +20,7 @@ The Arduino folder contains three sub folders namely:
 	*NOTE*: The file path above is dependent your primary drive letter. Just find the "Arduino" folder inside your.
 	"Program Files (x86)" on you primary drive and locate the "examples" folder.
 
-3. _libraries_ - this folder contains libraries needed to enable code examples to work properply with sensors and related hardware.
+3. __libraries__ - this folder contains libraries needed to enable code examples to work properply with sensors and related hardware.
 
 		-First close your Arduino IDE and all related processes.
 		-Copy all the content of the libraries folder.
