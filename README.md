@@ -5,7 +5,7 @@ This folder houses software materials for the Waziup IoT and Big Data Cloud Plat
 
 The Arduino folder contains three sub folders namely:
 
-1. _Installations & Softwares_ - this folder contains driver software for all Waziup related hardware.
+1. __Installations & Softwares__ - this folder contains driver software for all Waziup related hardware.
 
 		For the NanoLora and Wazidev v1.2 boards to work properly on windows, simply download and install "CH341SER.EXE".
 
