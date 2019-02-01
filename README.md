@@ -27,4 +27,4 @@ The Arduino folder contains three sub folders namely:
 		-Navigate to "..\Documents\Arduino\libraries" and paste.
 		-Open your Arduino IDE and navigate to "Sketch->Inlude Library".
 
-----------------------------------------------------------------------------------------------
+---------------------------------------Arduino Folder-----------------------------------------
