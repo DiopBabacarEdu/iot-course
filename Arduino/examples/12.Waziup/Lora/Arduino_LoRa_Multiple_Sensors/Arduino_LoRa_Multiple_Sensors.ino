@@ -56,8 +56,7 @@ int loraMode=LORAMODE;
 boolean a = true;
 boolean b = false;
 
-void setup()
-{
+void setup(){
   int e;
   delay(3000);
   // Open serial communications and wait for port to open:
@@ -87,14 +86,14 @@ void setup()
   Serial.println(e, DEC);
   
   // Select amplifier line; PABOOST or RFO
-#ifdef PABOOST
-  sx1272._needPABOOST=true;
-  // previous way for setting output power
-  // powerLevel='x';
-#else
-  // previous way for setting output power
-  // powerLevel='M';  
-#endif
+  #ifdef PABOOST
+    sx1272._needPABOOST=true;
+    // previous way for setting output power
+    // powerLevel='x';
+  #else
+    // previous way for setting output power
+    // powerLevel='M';  
+  #endif
 
   e = sx1272.setPowerDBM((uint8_t)MAX_DBM);
   
@@ -108,52 +107,51 @@ void setup()
   
   // Print a success message
   Serial.println(F("SX1272 successfully configured"));
-
   delay(500);
 }
 
-char *ftoa(char *a, double f, int precision)
-{
- long p[] = {0,10,100,1000,10000,100000,1000000,10000000,100000000};
- 
- char *ret = a;
- long heiltal = (long)f;
- itoa(heiltal, a, 10);
- while (*a != '\0') a++;
- *a++ = '.';
- long desimal = abs((long)((f - heiltal) * p[precision]));
- if (desimal < p[precision-1]) {
-  *a++ = '0';
- }  
- itoa(desimal, a, 10);
- return ret;
+char *ftoa(char *a, double f, int precision){
+   long p[] = {0,10,100,1000,10000,100000,1000000,10000000,100000000};
+   
+   char *ret = a;
+   long heiltal = (long)f;
+   itoa(heiltal, a, 10);
+   while (*a != '\0') a++;
+   *a++ = '.';
+   long desimal = abs((long)((f - heiltal) * p[precision]));
+   if (desimal < p[precision-1]) {
+    *a++ = '0';
+   }  
+   itoa(desimal, a, 10);
+   return ret;
 }
 
 void loop(void){
-    long startSend;
-    long endSend;
-    int e;
-    char* sensorDes; //HOLD SENSOR DESCRIPTION
-    float sensorVal; //HOLDS SENSOR VALUES TO BE SENT
+    float temp = 13.00; //SENSOR VALUE 1, DESCRIPTION TC
+    float hum = 11.00;  //SENSOR VALUE 2, DESCRIPTION HM
     
-  if (millis() > nextTransmissionTime) {
-      uint8_t r_size;
-      char float_str[20];
       //ADD MORE ELSE IF TO INCREASE LIST OF SENSORS TO POST//
       ///////////////////////////
       if(a){
         a = false;
         b = true;
-        sensorDes = "\\!TC/%s";
-        sensorVal = 14.00;
+        postValues("\\!TC/%s", temp);
       }else if(b){
         a = true;
         b = false;
-        sensorDes = "\\!HM/%s";
-        sensorVal = 11.00;
+        postValues("\\!HM/%s", hum);
       }
       ///////////////////////////
+}
+
+void postValues(char* sensorDes, float sensorVal){
+      uint8_t r_size;
+      char float_str[20];
+      long startSend;
+      long endSend;
+      int e;
       
+   if (millis() > nextTransmissionTime){
       ftoa(float_str,sensorVal,2);
       r_size=sprintf((char*)message, sensorDes, float_str);   
 
@@ -190,6 +188,7 @@ void loop(void){
 
       Serial.print(F("Packet sent, state "));
       Serial.println(e);
+
       
      //15 Seconds
      nextTransmissionTime=millis()+10000;
